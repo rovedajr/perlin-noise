@@ -21,11 +21,11 @@ function setup() {
   for (let i = 0; i < 100; i++) {
     particles[i] = new Particle()
   }
-
+  
+  background(255)
 }
 
 function draw() {
-background(255)
 var yoff = 0
 
 for (let y = 0; y < rows; y++) {
@@ -53,8 +53,8 @@ for (let y = 0; y < rows; y++) {
       
       particles[i].follow(flowfield )
       particles[i].update()
-      particles[i].show()
       particles[i].edges()
+      particles[i].show()
       
     }
 
