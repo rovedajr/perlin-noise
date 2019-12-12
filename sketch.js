@@ -38,13 +38,7 @@ for (let y = 0; y < rows; y++) {
     flowfield[index] = v
 
     xoff += inc
-    stroke(0,50)
-    // push()
-    // translate(x * scl, y * scl)
-    // rotate(v.heading())
-    // strokeWeight(1)
-    // line(0,0,scl,0)
-    // pop()    
+    stroke(0,50)   
     }
     yoff += inc
     zoff += 0.0001
