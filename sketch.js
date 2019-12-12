@@ -1,7 +1,29 @@
+var inc = 0.01
+
 function setup() {
-  // put setup code here
+  createCanvas(400, 400)
 }
 
 function draw() {
-  // put drawing code here
+
+var yoff = 0
+
+  loadPixels()
+for (let y = 0; y < width; y++) {
+  var xoff = 0
+  for (let x = 0; x < width; x++) {
+    var index = (x + y * width) * 4
+    var r = noise(xoff, yoff) * 255
+    pixels[index] = r
+    pixels[index+1] = r
+    pixels[index+2] = r
+    pixels[index+3] = 255
+
+    xoff += inc
+    }
+    yoff += inc
+
+  }
+  updatePixels()
+  // noLoop()
 }
